@@ -4,6 +4,12 @@ arch:
 language: java
 jdk:
   - openjdk8
+  - openjdk11
+jobs:
+  exclude:
+    - jdk: openjdk8
+      arch: ppc64le
+      
 install: ./installViaTravis.sh
 script: ./buildViaTravis.sh
 env:
